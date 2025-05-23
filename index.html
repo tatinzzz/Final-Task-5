@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Midterm Tasks</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-size: 1.1em;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      margin: 40px auto;
+      padding: 40px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff99;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff99;
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      margin-right: 10px;
+      padding: 12px 30px;
+      background: #00ff99;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00ff99;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00cc7a;
+      box-shadow: 0 0 15px #00cc7a;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://tatinzzz.github.io/EDM-Portfolio/" class="btn">BACK TO PORTFOLIO</a>
+    <a href="https://github.com/tatinzzz/Final-Task-5" class="btn" target="_blank">VIEW ON GITHUB</a>
+  </div>
+
+
+  <div id="particles-js"></div>
+
+  <section>
+ 
+
+
+  <h1>Finals Task 5 - Using SQL Views, Stored Procedures, and Stored Functions</h1>
+
+  <h2>Instructions:</h2>
+  <ul>
+    <li>1. Read the lecture on SQL views and stored procedures to understand how they work.</li>
+    <li>2. Start XAMPP and MySQL Workbench – create or start a connection.</li>
+    <li>3. Open the <code>democodes.sql</code> file and try executing the examples using <code>hrd.sql</code>.</li>
+    <li>4. After practicing, perform the required SQL statements using <code>inventory.sql</code>.</li>
+    <li>5. Take a screenshot of the SQL code and its output for each item below.</li>
+  </ul>
+
+ </div>
+
+  <div class="section">
+  <h2>CREATE A VIEW</h2>
+  <p>Display the <strong>vendors_code</strong>, <strong>vendors name</strong>, <strong>product description</strong>, and <strong>p_indate</strong> of all products with <strong>p_indate</strong> from 2002 onwards.</p>
+  <h3>SQL Code and Output:</h3>
+  <img src="https://i.imgur.com/DmHe4i7.png" alt="Create View 1">
+ </div>
+
+<div class="section">
+  <h2>CREATE A VIEW</h2>
+  <p>Display all products whose price range is between 100-150.</p>
+  <h3>SQL Code and Output:</h3>
+  <img src="https://i.imgur.com/rBz6T1N.png" alt="Create View 2">
+ </div>
+
+
+
+<div class="section">
+  <h2>CREATE A VIEW</h2>
+  <p>Compute the <strong>TOTAL_PRICE</strong> of all products by calculating <strong>(P_ONHAND x P_PRICE)</strong> sold by vendors with <strong>v_code</strong> 21344, 23119, and 24288.</p>
+  <h3>SQL Code and Output:</h3>
+  <img src="https://i.imgur.com/NB0um1z.png" alt="Create View 3">
+ </div>
+
+<div class="section">
+  <h2>CREATE A STORED PROCEDURE</h2>
+  <p>It should take a single parameter and update the vendor name from <strong>‘Bryson, Inc.’</strong> to <strong>‘Bryson and Co’</strong>.</p>
+  <h3>SQL Code and Output:</h3>
+  <img src="https://i.imgur.com/hCOTWYc.png" alt="Create Procedure 4">
+ </div>
+
+
+<div class="section">
+  <h2>CREATE A FUNCTION</h2>
+  <p>The function should take 2 parameters (<code>v_code</code> and <code>v_state</code>) and display all product descriptions and prices based on the parameters.</p>
+  <h3>SQL Code and Output:</h3>
+  <img src="https://i.imgur.com/79FXTpB.png" alt="Create Function 5"
+ </div>
+
+
+
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ff99" },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+        "opacity": { "value": 0.5, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } },
+        "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1 } },
+        "line_linked": { "enable": true, "distance": 150, "color": "#00ff99", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 3, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
